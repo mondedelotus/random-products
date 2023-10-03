@@ -16,8 +16,7 @@ function random_products_shortcode($atts)
             'count' => get_option('random_products_count', 5),
             // Default number of products to display
         ),
-        $atts,
-        'random_products'
+        $atts
     );
 
     // Query WooCommerce for random products
