@@ -48,12 +48,3 @@ function random_products_admin_page()
     </div>
     <?php
 }
-
-function random_products_plugin_action_links($links)
-{
-    $settings_link = '<a href="options-general.php?page=random_products_settings">Settings</a>';
-    array_unshift($links, $settings_link);
-    return $links;
-}
-
-add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'random_products_plugin_action_links');

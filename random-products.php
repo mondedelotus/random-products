@@ -42,3 +42,13 @@ function random_products_shortcode($atts)
     return ob_get_clean();
 }
 add_shortcode('random_products', 'random_products_shortcode');
+
+// added link to settings on the plugins page
+function random_products_plugin_action_links($links)
+{
+    $settings_link = '<a href="options-general.php?page=random_products_settings">Settings</a>';
+    array_unshift($links, $settings_link);
+    return $links;
+}
+
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'random_products_plugin_action_links');
